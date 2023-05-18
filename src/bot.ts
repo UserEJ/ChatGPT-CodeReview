@@ -27,7 +27,7 @@ export const robot = (app: Probot) => {
         return null;
       } -->
 
-      return new Chat(data.value);
+      return new Chat(data.value)
     } catch {
       await context.octokit.issues.createComment({
         repo: repo.repo,
