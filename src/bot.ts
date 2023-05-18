@@ -23,11 +23,11 @@ export const robot = (app: Probot) => {
         }
       )) as any;
 
-      if (!data?.value) {
+<!--       if (!data?.value) {
         return null;
-      }
+      } -->
 
-      return new Chat(data.value);
+      return new Chat(data.value)
     } catch {
       await context.octokit.issues.createComment({
         repo: repo.repo,
